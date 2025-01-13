@@ -15,7 +15,6 @@ namespace ShoppingList.Views
             Products = new ObservableCollection<Product>(FileHandler.LoadProducts());
             BindingContext = this;
 
-            // Attach Disappearing event to save data when app window is minimized or closed
             this.Disappearing += OnAppDisappearing;
         }
 
