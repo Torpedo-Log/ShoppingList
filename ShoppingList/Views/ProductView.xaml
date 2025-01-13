@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingList.Views.ProductView"
+             Padding="10"
+             BackgroundColor="#f9f9f9"
+             Margin="5">
+    
+    <Frame CornerRadius="10" BorderColor="#ccc" HasShadow="True">
+        <StackLayout Orientation="Horizontal" Spacing="15" VerticalOptions="Center">
+            <Label Text="{Binding Name}" 
+                   VerticalOptions="Center" 
+                   FontAttributes="Bold" 
+                   FontSize="Medium" />
+            
+            <StackLayout Orientation="Horizontal" Spacing="5" VerticalOptions="Center">
+                <Label Text="Qty:" VerticalOptions="Center" FontAttributes="Italic" />
+                <Label Text="{Binding Quantity}" VerticalOptions="Center" />
+            </StackLayout>
+            
+            <Label Text="{Binding Unit}" VerticalOptions="Center" FontAttributes="Italic" />
+
+            <StackLayout Orientation="Horizontal" Spacing="5" VerticalOptions="Center">
+                <Button Text="-" 
+                        Clicked="OnDecreaseQuantity" 
+                        WidthRequest="30" 
+                        HeightRequest="30" 
+                        CornerRadius="15"
+                        BackgroundColor="#ffcccc" 
+                        TextColor="Black" />
+                
+                <Button Text="+" 
+                        Clicked="OnIncreaseQuantity" 
+                        WidthRequest="30" 
+                        HeightRequest="30" 
+                        CornerRadius="15"
+                        BackgroundColor="#ccffcc" 
+                        TextColor="Black" />
+            </StackLayout>
+
+
+            <CheckBox IsChecked="{Binding IsPurchased}" VerticalOptions="Center" />
+
+            <Button Text="Delete" 
+                    Clicked="OnDeleteClicked" 
+                    BackgroundColor="#ff6666" 
+                    TextColor="White" 
+                    CornerRadius="5"
+                    Padding="5,0" 
+                    WidthRequest="70" />
+
+        </StackLayout>
+    </Frame>
+
+</ContentView>
+
+
