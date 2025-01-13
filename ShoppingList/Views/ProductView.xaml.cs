@@ -93,7 +93,7 @@ namespace ShoppingList.Views
             if (ParentCollection != null)
             {
                 Debug.WriteLine("Saving changes to file...");
-                FileHandler.SaveProducts(ParentCollection.ToList());  // Save the updated collection
+                FileHandler.SaveProducts(ParentCollection.ToList());  
             }
             else
             {
@@ -103,7 +103,7 @@ namespace ShoppingList.Views
         private void SaveChanges2()
         {
                 Debug.WriteLine("Saving changes to file...");
-                FileHandler.SaveProducts(ParentCollection.ToList());  // Save the updated collection
+                FileHandler.SaveProducts(ParentCollection.ToList()); 
             
         }
 
